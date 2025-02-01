@@ -1,40 +1,65 @@
-# HelixAI
-A decentralized data sharing and querying platform for users to commercialize their healthcare data and institutions to get comprehensive data insights.
-Features:
-- Users can turn on the data sharing function to earn token rewards (while the app collects data in the background, it never accesses user identity thus privacy is ensured)
-- After collecting the data, use AI federated learning to get data insights from the dataset, the specific information is never exposed, thus when other users wants to get data insights, they directly query the model instead of accessing the original datasets.
+Healthchain
+A blockchain-powered platform that enables secure healthcare data monetization while preserving user privacy. Users can earn rewards for sharing anonymized data, and institutions can obtain AI-driven insights without direct access to raw datasets.
 
+Key Features
+Privacy-Preserving Data Sharing – Users can opt-in to share anonymized healthcare data and receive token rewards.
+AI-Driven Insights – Instead of accessing raw data, institutions can query an AI model trained on a federated dataset, ensuring complete data privacy.
+Decentralized & Secure – Built on blockchain to ensure data integrity and security.
+Setup Instructions
+1. Install Dependencies
+Navigate to the project root directory and install required dependencies:
 
-## Environmental Setup
-- install all dependencies
-```bash
+bash
+Copy
+Edit
 cd ..
 npm install
-```
-for frontend:
-```bash
+For frontend dependencies:
+
+bash
+Copy
+Edit
 cd frontend
 npm install
-```
-*** note that to install new dependencies/libraries to avoid conflicts please use yarn add.
+📌 Note: Use yarn add instead of npm install when adding new dependencies to avoid compatibility issues.
 
-- replace the environmental variables with the correct values
-  
-- install hardhat
-(Here we use yarn package manager)
-```bash
+2. Configure Environment Variables
+Ensure that all necessary .env variables are correctly set up before running the application.
+
+3. Install Hardhat for Smart Contracts
+We use Hardhat for Ethereum smart contract development. Install it using:
+
+bash
+Copy
+Edit
 yarn add hardhat
 npx hardhat
-```
-- compile smart contracts
-```bash
+4. Compile Smart Contracts
+Run the following command to compile smart contracts:
+
+bash
+Copy
+Edit
 npx hardhat compile
-```
-- smart contracts abi files
-makesure you have the correct .json files for smart contracts in 
+5. Verify ABI Files
+Ensure that the correct .json ABI files for smart contracts are present before deployment.
 
+Running the Application
+Start the Frontend
+To launch the web interface, navigate to the frontend directory and run:
 
-## Run the app
-- run frontend
-```
+bash
+Copy
+Edit
+cd frontend
+npm start
+Deploy Smart Contracts (Optional)
+If deploying contracts to a local blockchain or testnet, use:
+
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy.js --network <network_name>
+Contributing
+We welcome contributions! Feel free to open issues, submit pull requests, or suggest improvements.
 
